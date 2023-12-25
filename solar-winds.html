@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="solar-winds.css">
+    <title>Solar Winds Breach Case Study</title>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">Back</button>
+    <header>
+        <h1> The Solar Winds Breach Case Study</h1>
+    </header>
+
+    <section>
+        <h2>Question 1: Table Analysis of Solar Winds Exploit using the Cyber Kill Chain</h2>
+        <table>
+            <tr>
+                <th>Phase</th>
+                <th>Description</th>
+                <th>Identified?</th>
+            </tr>
+            <tr>
+                <td>Reconnaissance</td>
+                <td>Gathering information about the target systems and identifying potential vulnerabilities</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Weaponization</td>
+                <td>Creating or obtaining the exploit tools or malware</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Delivery</td>
+                <td>Transmitting the malware to the target system</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Exploitation</td>
+                <td>Executing the exploit and gaining unauthorized access</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Installation</td>
+                <td>Establishing persistence on the compromised system</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Command and Control (C2)</td>
+                <td>Establishing communication with the attacker's infrastructure</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Actions on Objectives</td>
+                <td>Carrying out malicious activities, exfiltrating data, etc.</td>
+                <td>Yes</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Question 2: List of Possible Mitigations for Each Phase</h2>
+        <table>
+            <tr>
+                <th>Phase</th>
+                <th>Mitigations</th>
+            </tr>
+            <tr>
+                <td>Reconnaissance</td>
+                <td>
+                    <ul>
+                        <li>Implement network segmentation to limit the attacker's access to critical systems.</li>
+                        <li>Regularly monitor and analyze network traffic for any suspicious activity.</li>
+                        <li>Educate employees on the importance of not sharing sensitive information online.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Weaponization</td>
+                <td>
+                    <ul>
+                        <li>Employ robust email filtering and scanning to detect and block malicious attachments.</li>
+                        <li>Implement application whitelisting to prevent unauthorized software execution.</li>
+                        <li>Regularly update and patch software to address known vulnerabilities.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Delivery</td>
+                <td>
+                    <ul>
+                        <li>Use strong email security measures like SPF, DKIM, and DMARC to prevent email spoofing.</li>
+                        <li>Enable multi-factor authentication to protect against unauthorized access.</li>
+                        <li>Train employees to be cautious of suspicious email links and attachments.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Exploitation</td>
+                <td>
+                    <ul>
+                        <li>Regularly update and patch software to address known vulnerabilities.</li>
+                        <li>Implement intrusion detection and prevention systems to detect and block exploit attempts.</li>
+                        <li>Monitor and analyze system logs for any indications of exploitation.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Installation</td>
+                <td>
+                    <ul>
+                        <li>Implement robust endpoint protection solutions to detect and block malicious activities.</li>
+                        <li>Enable host-based firewalls to control inbound and outbound traffic.</li>
+                        <li>Conduct regular vulnerability assessments and penetration testing.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Command and Control (C2)</td>
+                <td>
+                    <ul>
+                        <li>Employ network traffic analysis tools to detect and block C2 communication.</li>
+                        <li>Implement strong network segmentation to limit lateral movement.</li>
+                        <li>Continuously monitor network traffic for any indicators of C2 activity.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Actions on Objectives</td>
+                <td>
+                    <ul>
+                        <li>Implement data loss prevention measures to detect and prevent data exfiltration.</li>
+                        <li>Regularly backup critical data and systems to enable quick recovery.</li>
+                        <li>Develop an incident response plan to effectively respond to and mitigate any malicious activities.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Question 3: Tools for Mitigation in Each Phase</h2>
+        <div class="slide">
+            <div class="slide">
+                <h2>Slide 3: Tools for Mitigation in Each Phase</h2>
+                <p>Now, let's explore the specific tools that can be utilized in each phase of the Cyber Kill Chain model to mitigate the Solar Winds exploit. Choosing the right tools is crucial for an effective defense strategy.</p>
+                <ul>
+                    <li><strong>Reconnaissance:</strong> Network scanning tools like Nmap and open-source intelligence (OSINT) tools such as Maltego are essential to discover and gather information about the target systems and collect publicly available information.</li>
+                    <li><strong>Weaponization:</strong> For creating and customizing exploit payloads, exploit frameworks like Metasploit are valuable. Malware development platforms like Cobalt Strike provide a wide range of capabilities for creating and deploying custom malware, including command and control (C2) functionality.</li>
+                    <li><strong>Delivery:</strong> Employing phishing simulation tools like GoPhish for testing user awareness and email security solutions like Proofpoint and Mimecast to detect and block malicious emails is crucial.</li>
+                    <li><strong>Exploitation:</strong> Vulnerability scanners such as Nessus and Qualys help identify vulnerabilities in target systems, while exploit frameworks like Metasploit provide ready-to-use exploit modules for known vulnerabilities.</li>
+                    <li><strong>Installation:</strong> Remote access tools (RATs) like Cobalt Strike and Empire facilitate establishing persistence on compromised systems. Endpoint protection solutions like CrowdStrike and Carbon Black can detect and block malicious activities.</li>
+                    <li><strong>Command and Control (C2):</strong> Network traffic analysis tools such as Wireshark and Zeek help monitor network traffic and identify suspicious communication patterns. Intrusion detection and prevention systems (IDPS) like Snort and Suricata can detect and block malicious network traffic.</li>
+                    <li><strong>Actions on Objectives:</strong> Security information and event management (SIEM) systems like Splunk and ELK Stack are essential for collecting and analyzing logs from various sources. Data loss prevention (DLP) solutions like Symantec DLP and McAfee DLP monitor and prevent the unauthorized exfiltration of sensitive data.</li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Chidera Chinemelum Achu. All rights reserved.</p>
+            <ul>
+                <!-- <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li> -->
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

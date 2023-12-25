@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firewall Overview</title>
+    <link rel="stylesheet" href="firewall.css">
+</head>
+<body>
+    <header>
+        <button class="back-button" onclick="goBack()">Back</button>
+        <h1>Firewall Overview</h1>
+    </header>
+
+    <section class="content">
+        <h2>Firewall Basics</h2>
+        <p>
+            A firewall is a system designed to prevent unauthorized access to a private network by filtering incoming information from the internet. It acts as a barrier, blocking unwanted traffic and permitting only desired traffic.
+        </p>
+    </section>
+
+    <section class="content">
+        <h2>Purpose of a Firewall</h2>
+        <ul>
+            <li>Creates a safety barrier between a private and the public internet to prevent unauthorized access.</li>
+            <li>Allows active monitoring and management of network access.</li>
+            <li>Protects against spyware, hackers, and other cyber threats.</li>
+            <li>Preserves the privacy of devices or networks.</li>
+            <li>Enables the establishment and implementation of security policies and rules.</li>
+        </ul>
+    </section>
+
+    <section class="content">
+        <h2>Types of Firewalls</h2>
+        <p>Firewalls can have different structures, functionality, and traffic-filtering methods. Here are some common types:</p>
+        <ul>
+            <li><strong>Packet Filtering Firewalls:</strong> Operate at junction points like routers and switches, checking data packets against established criteria.</li>
+            <li><strong>Proxy-Level or Application-Level Firewalls:</strong> Operate at the application level, using pre-configured policies to manage messages.</li>
+            <li><strong>Stateful Inspection Firewalls:</strong> Evaluate data packets based on a database of previous successful connections, offering greater security but potentially impacting network performance.</li>
+            <li><strong>Next-Generation Firewalls (NGFWs):</strong> Combine various methods, monitoring packets at an application level and conducting quick network assessments to detect suspicious or invasive activity.</li>
+        </ul>
+    </section>
+
+    <section class="youtube-video">
+        <h2>Watch a Video Explanation</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kDEX1HXybrU" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Chidera Chinemelum Achu. All rights reserved.</p>
+    </footer>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

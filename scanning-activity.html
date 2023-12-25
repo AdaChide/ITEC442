@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanning Activity</title>
+    <link rel="stylesheet" href="scanning-activity.css">
+</head>
+<body>
+    <header>
+        <button class="back-button" onclick="goBack()">Back</button>
+        <h1>Scanning Activity</h1>
+    </header>
+
+    <section class="task">
+        <p>Our goal with this activity is to perform a scan here i chose MacOS terminal which is also similar to the linux (Using same Unix environment)which will give us a more detailed look at what we are looking for, this includes what we are looking for including hops, Biggest Delays, Main Server, Registered Contacts , MX Record and website host. </p>
+        <h2>Hops</h2>
+        <img src="traceroute.png" alt="Traceroute output">
+        <div class="task-description">
+            <p>
+                In Task 1, we used the traceroute command to trace the route from our machine to the assigned website, which is chideraadaeze.github.io in this case.
+                Traceroute provides information about the number of hops or network nodes between our machine and the destination website, helping us understand the path that data packets take to reach the destination.
+            </p>
+            <p>
+                The output of the traceroute command shows that there are multiple network nodes (hops) between our machine and the website. It lists the IP addresses of these nodes, along with the round-trip time (in milliseconds) it takes for packets to travel to each node.
+            </p>
+            <p>
+                Notably, some hops did not respond (denoted by '*'), which can happen due to firewall or security configurations that prevent response to traceroute requests.
+            </p>
+            <p>
+                Overall, traceroute provides valuable insights into the network path to the website, helping us identify the number of hops, response times, and potential bottlenecks in the route.
+            </p>
+        </div>
+        </div>
+    </section>
+
+    <section class="task">
+        <h2>Biggest Delays and Average Duration</h2>
+        <img src="Delay.jpg" alt="cropped image for the biggest delay">
+        <div class="task-description">
+            <p>
+                At "hop 6," the response time is significantly higher compared to the previous hops. The RTT for this hop is approximately 925.771 milliseconds, which is notably longer than the response times at other hops.
+<br>
+                The average duration of this delay can be considered to be around 925.771 milliseconds for "hop 6." It's worth noting that such delays can occur for various reasons, including network congestion, router configuration, or other factors in the network path.
+            </p>
+        </div>
+    </section>
+
+    <section class="task">
+        <h2>Main Nameservers</h2>
+        <img src="mainserver.png" alt="result of the command dig NS ">
+        <div class="task-description">
+            <p>There are four authoritative name servers (NS records) for "google.com":
+                ns1.google.com
+                ns2.google.com
+                ns3.google.com
+                ns4.google.com
+                Each name server has both IPv4 and IPv6 addresses.
+                <br>
+                These name servers are responsible for handling DNS queries for the "google.com" domain. The entire query took 54 milliseconds, and it was answered by the DNS server at 192.168.25.1.</p>
+        </div>
+    </section>
+
+    <section class="task">
+        <h2> Registered Contact</h2>
+        <img src="registered-contact.png" alt="Result of running the whois command for a website">
+        <div class="task-description">
+            <p>
+                The administrative contact for the "chideraadaeze.github.io" TLD is the Internet Administrator at the Internet Computer Bureau Limited,
+                 located in the British Indian Ocean Territory.
+                 The technical contact is an administrator at Internet Computer Bureau Ltd, 
+                 based in the United Kingdom.
+                 <br>
+                 The authoritative name servers (DNS servers) for the ".io" TLD are listed, 
+                 including their IPv4 and IPv6 addresses.
+                 <br>
+                 The TLD was created in 1997 and was last updated in January 2023.
+            </p>
+        </div>
+    </section>
+
+    <section class="task">
+        <h2> MX Record</h2>
+        <img src="mx-record.jpg" alt="result of running the command">
+        <div class="task-description">
+            <p>I ran nslookup -type=mx google.com<br>
+                and it returned the following information
+                <br>
+                Server:		192.168.25.1
+                <br>
+                Address:	192.168.25.1#53
+                </p>
+        </div>
+    </section>
+
+    <section class="task">
+        <h2> Website Hosting</h2>
+       <img src="hosting.jpg" alt="result of whois and a an ip address in unix ">
+        <div class="task-description">
+           <p>Using "whois 68.66.247.187"</p>
+           <br>
+           <p>The IP address 68.66.247.187 belongs to A2 Hosting, Inc., this is the summary 
+<br>
+            Organization: A2 Hosting, Inc.<br>
+            Address: P.O. Box 2998, Ann Arbor, MI, 48106, United States <br>
+            Website: A2 Hosting
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Chidera Chinemelum Achu. All rights reserved.</p>
+            <ul>
+                <!-- <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li> -->
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
