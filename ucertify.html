@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uCertify Experience</title>
+    <link rel="stylesheet" href="ucertify.css">
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">Back</button>
+    <div class="container">
+        <h1>My uCertify Journey</h1>
+
+        <!-- Lab Session: Setting Up a Honeypot on Kali Linux -->
+        <section class="honeypot">
+            <h2>Setting Up a Honeypot on Kali Linux</h2>
+            <p>A honeypot is basically a cybersecurity mechanism set up to detect, deflect, or study attempts at unauthorized use of information systems. It's like a trap for cyber attackers. The honeypot looks like a vulnerable system or network, enticing hackers to interact with it. This way, security professionals can observe their tactics, techniques, and procedures to enhance overall system security.</p>
+            <h3>Steps:</h3>
+            <ol>
+                <li>Started with opening the terminal</li>
+                <li>Used <code>ifconfig</code> to list my network and get the IP address</li>
+                <li>Used the <code>cd</code> command to change directory into the pentbox 1.8</li>
+                <li>In order to run the program, used <code>./pentbox.rb</code> to set up the honeypot by following the instructions displayed by the program</li>
+            </ol>
+            <p>Explanation of commands used:<br>
+                <ol>
+                    <li>IFCONFIG: This command displays the network settings eg ipaddress</li>
+                    <li>CD: Is a command used to change on debian operating system such as kali linux
+                        Then i entered command ls to list out the whole directory</li>
+                    <li>You can use <code>./&lt;filename&gt;</code> to run a file</li>
+                </ol>
+                Honeypot is a trap that helps in catching attrackers 
+Port 443 is used explicitly for HTTPS services and hence is the standard port for HTTPS (encrypted) traffic
+secure connection failed means it could not transfer data
+            </p>
+        <img src="honeypot1.jpeg" alt="">
+        <img src="honeypot2.jpeg" alt="">
+        <img src="honeypot3.jpeg" alt="">
+        <img src="honeypot4.jpeg" alt="">
+        <!-- Lab Session: Performing Session Hijacking using Burp Suite -->
+        <section class="burp-suite">
+            <h2>Performing Session Hijacking using Burp Suite</h2>
+            <p>Burp Suite is a set of tools used for penetration testing of web applications.</p>
+            <h3>Steps:</h3>
+            <ol>
+                <li>Started with opening my desktop and clicked on Burp Suite icon</li>
+                <li>Verified the following steps:</li>
+                <ul>
+                    <li>Temporary project</li>
+                    <li>Selected the configuration that loaded the project which took a while to load</li>
+                </ul>
+            </ol>
+            <img src="hijacking.jpeg" alt="">
+        </section>
+
+        <!-- Lab Session: Attacking a Website Using XSS Injection -->
+        <section class="xss-injection">
+            <h2>Attacking a Website Using XSS Injection</h2>
+            <p>Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites.</p>
+            <h3>Steps:</h3>
+            <ol>
+                <li>Opened Firefox ESR, then entered <code>localhost/dvwa</code> which displayed the username and password to be entered in the DVWA</li>
+                <img src="attack1.jpeg" alt="">
+                <li>Went to DVWA security, clicked low, and the submit button</li>
+                <li>Went to XSS (reflected), which brought out a box "what's your name" then typed <code>&lt;body onload=alert("uCertify")&gt;</code></li>
+                <li>Did the same process and typed <code>&lt;script&gt;alert(document.cookie)&lt;/script&gt;</code></li>
+                <li>Went to XSS (stored), entered the name (uclan1) and the message: <code>&lt;script&gt;alert("uCertify")&lt;/script&gt;</code></li>
+                <li>Encountered the problem of delay</li>
+            </ol>
+            <h2>Securing A Hotspot</h2>
+            <ol>
+            <li><img src="hotspot.jpeg" alt="Steps to secure hotspot"></li>
+            <li> It directed me to wireless page and displayed manual or WiFi protected and I clicked on manual which displayed how WiFi protected setup are being done</li>
+            <img src="hotspot2.jpeg" alt="Steps to secure hotspot">
+            <li> Under the manual I have to enable it</li>
+            <img src="hotspot3.jpeg" alt="Steps to secure a hotspot">
+            <img src="hotspot4.jpeg" alt="Steps to secure a hotspot">
+            <img src="hotspot5.jpeg" alt="Steps to secure a hotspot">
+            <img src="hotspot6.jpeg" alt="Steps to secure a hotspot">
+        </ol>
+        </section>
+
+        <section>
+            <h2>Scanning Malware Using Antivirus</h2>
+            <p>An antivirus is a computer program used to prevent, detect, and remove any malware.</p>
+
+            <ol>
+                <li>Went to the search bar and typed "defender".</li>
+                <li>From the search result, clicked on Windows Defender. Meant to scan, but mine didn't.</li>
+                <li>The Windows Defender tried scanning, which it scanned. Windows Defender is comprehensive, ongoing, and real-time antivirus software.</li>
+                <li>Navigated to local disk > lab file and checked DarkcometRAT531.</li>
+                <li>Went to the home tab, clicked "Show Details" link to get the threat info.</li>
+                <li>The potential threat details dialog was verified, then clicked "Apply Actions".</li>
+                <li>It displayed "YOUR ACTIONS APPLIED SUCCESSFULLY".</li>
+            </ol>
+            <p>
+                Netcraft: Is an internet security that provide large number of use cases, including cybercrime,detection and disruption etc<br>
+                step1:Turned on the BaseVM <br>
+Step2:clicked on google chrome
+            </p>
+            <img src="scanninmal1.jpeg" alt="step1">
+            <img src="scanningmal2.jpeg" alt="step2"><img src="scanningmal3.jpeg" alt="step3">
+        </section>
+
+        <section>
+            <h2>Detecting a Phishing Site Using Netcraft</h2>
+            <p>Phishing is a technique used to acquire information through deception using electronic communication.</p>
+
+            <ol>
+                <li>Turned on the BaseVM.</li>
+                <li>Clicked on Google Chrome.</li>
+                <li>Went to the task bar and typed "http://toolbar:netctaft.com".</li>
+                <img src="phishing1.jpeg" alt="">
+                <li>From the browser protection, clicked "Learn More", then scrolled down under "Download the extension today" and clicked Chrome. Added it to Chrome, and also added it to extensions.</li>
+                <img src="phishing2.jpeg" alt="">
+                <li>When added to Chrome, it displayed a message "Netcraft has been added to Chrome".</li>
+                <img src="phishing3.jpeg" alt="">
+                <li>On a new tab, typed "www.google.com".</li>
+                <li>Clicked on the extension and observed the risk rating.</li>
+                <li>Clicked "Site Report", which took a while to load, observed the report containing IP address, background, network, etc.</li>
+            </ol>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Chidera Chinemelum Achu. All rights reserved.</p>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
